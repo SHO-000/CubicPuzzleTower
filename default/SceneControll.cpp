@@ -36,6 +36,8 @@ void SceneControll::Create()
 
 	p_uiBase = new UIBase();
 	p_uiBase->Create();
+
+	p_levelSelect = new LevelSelect();
 }
 
 //-----------------------------------------------------------------------------
@@ -55,6 +57,8 @@ void SceneControll::Delete()
 
 	p_uiBase->Delete();
 	delete(p_uiBase);
+
+	delete(p_levelSelect);
 }
 
 //-----------------------------------------------------------------------------
@@ -71,6 +75,10 @@ void SceneControll::Init()
 	p_stage->Init();
 
 	p_uiBase->Init();
+
+	p_levelSelect->Init();
+
+	m_isChange = false;
 }
 
 //-----------------------------------------------------------------------------
@@ -87,7 +95,10 @@ void SceneControll::UpdateTitle()
 //-----------------------------------------------------------------------------
 void SceneControll::UpdateSelect()
 {
+	p_levelSelect->Update();
 
+	p_uiBase->SetNowScene(m_nowScene);
+	p_uiBase->SetLevelNum(p_levelSelect->GetLevelNum());
 }
 
 //-----------------------------------------------------------------------------
@@ -112,6 +123,7 @@ void SceneControll::UpdatePlay()
 	}
 
 	p_uiBase->SetNowScene(m_nowScene);
+	p_uiBase->SetNowStageNum(p_stage->GetNowStageNum());
 	p_uiBase->Update();
 }
 
@@ -128,7 +140,7 @@ void SceneControll::DrawTitle()
 //-----------------------------------------------------------------------------
 void SceneControll::DrawSelect()
 {
-
+	p_uiBase->Draw();
 }
 
 //-----------------------------------------------------------------------------
@@ -151,9 +163,36 @@ void SceneControll::ChangeScene()
 {
 	if (m_nowScene == TITLE)
 	{
-		if (GetInput(START))
+		playSound(BGM_TITLE);
+
+		if (GetInput(START) == PUSHDOWN)
 		{
+			m_nowScene = SELECT;
+
+			stopSound(BGM_TITLE);
+			playSound(BGM_SELECT);
+		}
+	}
+	else if (m_nowScene == SELECT)
+	{
+		if (GetInput(START) == PUSHDOWN)
+		{
+			if (p_levelSelect->GetLevelNum() == NORMAL)
+			{
+				p_stage->SetStageNum(4);
+			}
+			if (p_levelSelect->GetLevelNum() == HARD)
+			{
+				p_stage->SetStageNum(7);
+			}
+			if (p_levelSelect->GetLevelNum() == EXTRA)
+			{
+				p_stage->SetStageNum(10);
+			}
 			m_nowScene = PLAY;
+
+			stopSound(BGM_SELECT);
+			playSound(BGM_PLAY);
 		}
 	}
 	else if (m_nowScene == PLAY)

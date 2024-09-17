@@ -53,6 +53,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		}
 	}
 
+	// waiiaiaiiaia
+
 	// ＤＸライブラリの後始末
 	DxLib_End();
 

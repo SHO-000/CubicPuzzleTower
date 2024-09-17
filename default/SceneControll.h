@@ -2,7 +2,8 @@
 // シーンコントロールクラス
 //-----------------------------------------------------------------------------
 #pragma once
-#include "DxLib.h"
+#include <DxLib.h>
+#include "Define.h"
 #include "InputInfo.h"
 #include "Sound.h"
 #include "PlayerBase.h"
@@ -10,6 +11,7 @@
 #include "Camera.h"
 #include "StageManager.h"
 #include "UIBase.h"
+#include "LevelSelect.h"
 
 class SceneControll
 {
@@ -43,7 +45,10 @@ private:
 	Camera *p_camera;
 	StageManager *p_stage;
 	UIBase *p_uiBase;
+	LevelSelect *p_levelSelect;
 
 	SCENE_TYPE m_nowScene;
+
+	bool m_isChange;
 };
 

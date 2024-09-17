@@ -9,9 +9,9 @@ int sound[ALL_NUM];
 // 読み込み
 void loadSound()
 {
-	sound[BGM_TITLE] = LoadSoundMem("data/sound/title.mp3");
-	sound[BGM_SELECT] = LoadSoundMem("data/sound/select.mp3");
-	sound[BGM_PLAY] = LoadSoundMem("data/sound/bgm_play.mp3");
+	sound[BGM_TITLE] = LoadSoundMem("data/sound/title.ogg");
+	sound[BGM_SELECT] = LoadSoundMem("data/sound/select.ogg");
+	sound[BGM_PLAY] = LoadSoundMem("data/sound/bgm_play.ogg");
 	sound[BGM_ALLCLEAR] = LoadSoundMem("data/sound/AllClear.mp3");
 	sound[SE_CURSOR] = LoadSoundMem("data/sound/cursor.mp3");
 	sound[SE_DECISION] = LoadSoundMem("data/sound/decision.mp3");
@@ -19,7 +19,7 @@ void loadSound()
 	sound[SE_PAUSE] = LoadSoundMem("data/sound/pause.mp3");
 	sound[SE_CANCEL] = LoadSoundMem("data/sound/cancel.mp3");
 	sound[SE_SHOT] = LoadSoundMem("data/sound/shot.mp3");
-	sound[SE_CUBEHIT] = LoadSoundMem("data/sound/cube_hit.mp3");
+	sound[SE_CUBEHIT] = LoadSoundMem("data/sound/cube_hit.ogg");
 	sound[SE_JUMP] = LoadSoundMem("data/sound/jump.mp3");
 	sound[SE_CLEAR] = LoadSoundMem("data/sound/clear.mp3");
 	sound[SE_SCAF] = LoadSoundMem("data/sound/scaf_move.mp3");

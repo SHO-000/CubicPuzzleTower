@@ -23,8 +23,8 @@ typedef enum SCENE_TYPE
 // レベル
 enum LEVEL
 {
-	easy,
-	normal,
-	hard,
-	extra
+	EASY = 0,
+	NORMAL,
+	HARD,
+	EXTRA
 };

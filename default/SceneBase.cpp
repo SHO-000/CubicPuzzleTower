@@ -49,6 +49,10 @@ void SceneBase::Update()
 	{
 		p_sceneControll->UpdateTitle();
 	}
+	else if (m_nowScene == SELECT)
+	{
+		p_sceneControll->UpdateSelect();
+	}
 	else if (m_nowScene == PLAY || m_nowScene == NEXT)
 	{
 		p_sceneControll->UpdatePlay();
@@ -65,6 +69,10 @@ void SceneBase::Draw()
 	if (m_nowScene == TITLE)
 	{
 		p_sceneControll->DrawTitle();
+	}
+	else if (m_nowScene == SELECT)
+	{
+		p_sceneControll->DrawSelect();
 	}
 	else if (m_nowScene == PLAY || m_nowScene == NEXT)
 	{

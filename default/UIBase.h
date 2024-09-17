@@ -24,6 +24,8 @@ public:
 	//---Set関数---------------------------------------------------------------------
 	void SetNowScene(SCENE_TYPE scene) { m_nowScene = scene; }
 	void SetMiniMapInfo(int i, VECTOR cubePos, VECTOR playerPos, VECTOR dirPos, bool isSupport);
+	void SetNowStageNum(int num) { p_uiControll->SetNowStageNum(num); }
+	void SetLevelNum(int num) { p_uiControll->SetLevelNum(num); }
 	//------------------------------------------------------------------------------
 
 private:

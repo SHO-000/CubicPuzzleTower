@@ -2,14 +2,6 @@
 // シーンベースクラス
 //-----------------------------------------------------------------------------
 #pragma once
-#include <DxLib.h>
-#include "Define.h"
-#include "InputInfo.h"
-#include "PlayerBase.h"
-#include "ObjectBase.h"
-#include "Camera.h"
-#include "StageManager.h"
-#include "UIBase.h"
 
 #include "SceneControll.h"
 

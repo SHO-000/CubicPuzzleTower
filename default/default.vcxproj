@@ -172,9 +172,9 @@
     <ClCompile Include="PlayerControll.cpp" />
     <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="SceneControll.cpp" />
-    <ClCompile Include="Select.cpp">
+    <ClCompile Include="LevelSelect.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Shadow.cpp">
@@ -220,9 +220,9 @@
     <ClInclude Include="PlayerControll.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneControll.h" />
-    <ClInclude Include="Select.h">
+    <ClInclude Include="LevelSelect.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Shadow.h">

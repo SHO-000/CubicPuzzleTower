@@ -57,7 +57,7 @@ void UIBase::Update()
 	}
 	else if (m_nowScene == PLAY)
 	{
-		;
+		p_uiControll->UpdatePlay();
 	}
 }
 
@@ -70,9 +70,14 @@ void UIBase::Draw()
 	{
 		p_uiControll->DrawTitle();
 	}
+	else if (m_nowScene == SELECT)
+	{
+		p_uiControll->DrawSelect();
+	}
 	else if (m_nowScene == PLAY)
 	{
 		p_miniMap->Draw();
+		p_uiControll->DrawPlay();
 	}
 }
 

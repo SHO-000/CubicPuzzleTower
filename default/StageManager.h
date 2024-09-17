@@ -23,6 +23,7 @@ public:
 
 	//---Set関数---------------------------------------------------------------------
 	void SetIsNext(bool flag) { m_isNext = flag; }
+	void SetStageNum(int num) { m_nowStageNum = num; }
 	//------------------------------------------------------------------------------
 
 private:
